@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<h2>Hello {{session['user']}}</h2>
+
+{% block content %}
+<!--<div   class="container">-->
+<!--    <div class = "d-flex justify-content-center flex-column">-->
+<!--        <img src="static/mark.png" width="100px">-->
+<!--        <p>user - {{ session['user'] }}</p>-->
+<!--    </div>-->
+<!--</div>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+
+
+<div class="card">
+    <img id="user" src="static/mark.png" alt="John" style="width:100%">
+    <h1>{{ session['user'] }}</h1>
+    <button>
+         {% if 'user' in session %}
+                        <li><a class="nav-link dropdown-item" href="/logout">Logout</a></li>
+                        {% endif %}
+    </button>
+</div>
+</body>
+</html>
+
+{% endblock %}

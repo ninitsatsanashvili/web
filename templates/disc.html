@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <div class="container">
+        <div class="row">
+            {% for each in data %}
+            <div class="col mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{each ['Species Illustration Photo']['src']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ each["Species Name"] }}</h5>
+                        <p class="card-text">Fat - {{ each["Fat, Total"] }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
