@@ -1,10 +1,8 @@
-import sqlite3
-import re
 import requests
 from flask import Flask, redirect, url_for, render_template, request, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from admin import admin_page
-import json
+
 
 app = Flask(__name__)
 
@@ -27,8 +25,6 @@ r = requests.get(url)
 data = r.json()
 
 
-# for i in data:
-#     print(i["Fat, Total"])
 
 
 def __str__(self):
